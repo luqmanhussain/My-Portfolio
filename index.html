@@ -1115,9 +1115,86 @@
         <div class="row block-9">
           <div class="col-md-8">
             <form
-              action=""
+              action="/"
               method="POST"
               data-netlify="true"
+              name="contact"
+              class="bg-light p-4 p-md-5 contact-form"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Your Name"
+                      name="name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Your Email"
+                      name="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Subject"
+                      name="subject"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <textarea
+                      name="message"
+                      cols="30"
+                      rows="7"
+                      class="form-control"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input
+                      type="submit"
+                      value="Send Message"
+                      class="btn btn-primary py-3 px-5"
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <!-- Ensure Netlify detects the form -->
+            <noscript>
+              <form name="contact" netlify>
+                <input type="text" name="name" />
+                <input type="email" name="email" />
+                <textarea name="message"></textarea>
+                <button type="submit">Send</button>
+              </form>
+            </noscript>
+
+            <form
+              action="/"
+              method="POST"
+              data-netlify="true"
+              name="contact"
               class="bg-light p-4 p-md-5 contact-form"
             >
               <input type="hidden" name="form-name" value="contact" />
