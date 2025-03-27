@@ -317,3 +317,10 @@ $(function() {
 
 });
 
+//loader
+
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        document.getElementById("custom-loader").style.display = "none";
+    }, 2500); // Loader disappears after 2.5 seconds
+});
